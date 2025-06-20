@@ -19,6 +19,7 @@ specs =
 main :: IO ()
 main = hspec $ do
     testAlg "naive algorithm" maxProd
+    testAlg "fast algorithm" maxProdFast
 
 testAlg :: String -> ([Int] -> Int -> Int) -> Spec
 testAlg label f =

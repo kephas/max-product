@@ -1,4 +1,4 @@
 dist-newstyle/
 .direnv/
-README.html
+*.html
 *.cabal

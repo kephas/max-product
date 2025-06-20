@@ -23,3 +23,15 @@ deletion.
 - Input: nums = [2,-1,2,-6,5,2,-5,7], m = 2
 - Output: 35
 - Explanation: The subsequence [5, 7] has the largest product of the first and last elements.
+
+# Solution
+
+`maxProd` is a naive implementation. It runs in quadratic time to the size of the list.
+
+`maxProdFast` is an optimized implementation. It runs in linear time by pre-computing at each place in the list what the biggest positive and negative number is between there and the end of the list.
+
+You can run a benchmark of the two functions with the following command:
+
+```
+$ hpack && cabal run bench -- --output bench.html
+```

@@ -1,0 +1,42 @@
+name:                maxprod
+version:             0.1.0.0
+license:             BSD3
+author:              "Pierre Thierry"
+maintainer:          "pierre@nothos.net"
+copyright:           "2025 Pierre Thierry"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+synopsis:            max product
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         max product
+
+dependencies:
+- base >= 4.7 && < 5
+
+language: Haskell2010
+
+library:
+  source-dirs: src
+  dependencies:
+    - base
+
+tests:
+  maxprod-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    dependencies:
+    - maxprod
+    - hspec
+    - QuickCheck
+    - string-interpolate
